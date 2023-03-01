@@ -44,7 +44,7 @@ def main():
         if "test/" in fileName:
             with open(fileName) as f:
                 n = int(f.readline().strip())
-                parents = list(map(f.readline().strip().spit()))
+                parents = list(map(int, f.readline().strip().split()))
                 height = compute_height(n, parents)
     elif fileType == "I":
         n = int(input())
