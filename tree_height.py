@@ -32,18 +32,26 @@ def compute_height(n, parents):
 
 
 def main():
-    # implement input form keyboard and from files
 
-    # let user input file name to use, don't allow file names with letter a
-    # account for github input inprecision
-    
-    # input number of elements
-    n = int(input())
-    # input values in one variable, separate with space, split these values in an array
-    tree = int(input().split())
-    treeElements = list(map(tree))
-    # call the function and output it's result
-    print(compute_height(n, treeElements))
+    fileType = input()
+    if fileType == "F":
+        fileName = input()
+        if ".a" in fileName:
+            return
+        if "test/" not in fileName:
+            fileName = 'test/' + fileName
+        if "test/" in fileName:
+            with open(fileName) as f:
+                n = int(f.readline().strip())
+                parents = f.readline.strip().split()
+                parents = list(map(int, parents))
+                height = compute_height(n, parents)
+    elif fileType == "I":
+        n = int(input())
+        parents = int(input.split())
+        parents = list(map(int, parents))
+        height = compute_height(n, parents)
+    print(height)
     
     pass
 
