@@ -6,7 +6,7 @@ import numpy
 
 
 def compute_height(n, parents):
-    heightArr = [-1]
+    heightArr = [-1] * n
 
     def scan(node):
         if heightArr[node] != -1:
@@ -48,8 +48,7 @@ def main():
                 height = compute_height(n, parents)
     elif fileType == "I":
         n = int(input())
-        parents = int(input.split())
-        parents = list(map(int, parents))
+        parents = list(map(int, input().split()))
         height = compute_height(n, parents)
     print(height)
 
