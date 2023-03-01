@@ -34,6 +34,7 @@ def compute_height(n, parents):
 def main():
 
     fileType = input()
+
     if fileType == "F":
         fileName = input()
         if ".a" in fileName:
@@ -43,8 +44,7 @@ def main():
         if "test/" in fileName:
             with open(fileName) as f:
                 n = int(f.readline().strip())
-                parents = f.readline.strip().split()
-                parents = list(map(int, parents))
+                parents = list(map(f.readline().strip().spit()))
                 height = compute_height(n, parents)
     elif fileType == "I":
         n = int(input())
@@ -52,8 +52,6 @@ def main():
         parents = list(map(int, parents))
         height = compute_height(n, parents)
     print(height)
-    
-    pass
 
 # In Python, the default limit on recursion depth is rather low,
 # so raise it here for this problem. Note that to take advantage
