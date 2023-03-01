@@ -13,11 +13,11 @@ def compute_height(n, parents):
             return heightArr[node]
         if parents[node] == -1:
             heightArr[node] = 1
-            return int(1)
+            return 1
 
         parentHeight = scan(parents[node])
 
-        heightArr[node] = parentHeight
+        heightArr[node] = parentHeight + 1
 
         return heightArr[node]
 
@@ -26,7 +26,7 @@ def compute_height(n, parents):
     for node in range(n):
         heightCurrent = scan(node)
         if max_height < heightCurrent:
-            max_height == heightCurrent
+            max_height = heightCurrent
 
     return max_height
 
