@@ -35,9 +35,9 @@ def main():
 
     fileType = input()
 
-    if fileType == "F":
+    if "F" in fileType:
         fileName = input()
-        if ".a" in fileName:
+        if "a" in fileName:
             return
         if "test/" not in fileName:
             fileName = 'test/' + fileName
