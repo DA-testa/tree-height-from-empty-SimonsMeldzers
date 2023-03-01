@@ -6,6 +6,23 @@ import numpy
 
 
 def compute_height(n, parents):
+    heightArr = [-1]
+
+    def scan(node):
+        if heightArr[node] != -1:
+            return heightArr[node]
+        if parents[node] == -1:
+            heightArr[node] = 1
+            return int(1)
+
+        parentHeight = scan(parents[node])
+
+        heightArr[node] = parentHeight
+
+        return heightArr[node]
+
+    
+
     # Write this function
     max_height = 0
     # Your code here
