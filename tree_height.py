@@ -46,11 +46,13 @@ def main():
                 n = int(f.readline().strip())
                 parents = list(map(int, f.readline().strip().split()))
                 height = compute_height(n, parents)
+                print(height)
     elif fileType == "I":
         n = int(input())
         parents = list(map(int, input().split()))
         height = compute_height(n, parents)
-    print(height)
+        print(height)
+    
 
 # In Python, the default limit on recursion depth is rather low,
 # so raise it here for this problem. Note that to take advantage
