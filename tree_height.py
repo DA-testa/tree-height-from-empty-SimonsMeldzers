@@ -47,7 +47,7 @@ def main():
                 parents = list(map(int, f.readline().strip().split()))
                 height = compute_height(n, parents)
                 print(height)
-    elif fileType == "I":
+    elif "I" in fileType:
         n = int(input())
         parents = list(map(int, input().split()))
         height = compute_height(n, parents)
