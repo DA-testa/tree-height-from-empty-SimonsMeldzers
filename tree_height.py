@@ -52,6 +52,8 @@ def main():
         parents = list(map(int, input().split()))
         height = compute_height(n, parents)
         print(height)
+    else:
+        print('Error')
     
 
 # In Python, the default limit on recursion depth is rather low,
